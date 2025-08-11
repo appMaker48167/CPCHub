@@ -10,6 +10,14 @@
   const branch = CONFIG.BRANCH;
   const token = CONFIG.GITHUB_TOKEN;
 
+// Debug: show current repo settings on screen
+document.body.insertAdjacentHTML(
+  "afterbegin",
+  `<div style="background:#fffae6;color:#333;padding:.5rem;font-size:.9rem;border-bottom:1px solid #ccc;">
+     Loading from: ${owner}/${repo} (branch: ${branch})
+   </div>`
+);
+  
   repoLink.href = `https://github.com/${owner}/${repo}`;
   repoLink.textContent = `${owner}/${repo}`;
 
